@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tobii</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- start header -->
+    <header
+      class="container"
+      style="
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 10px;
+        z-index: 1000; /* Đảm bảo header luôn hiển thị trên cùng */
+      "
+    >
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        style="background-color: antiquewhite"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"
+        >
+          <svg
+            class="bi me-2"
+            width="40"
+            height="32"
+            role="img"
+            aria-label="Bootstrap"
+          >
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+
+        <ul
+          class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+        >
+          <li>
+            <a
+              href="http://localhost/WEB_CODE/ITSS2/fe/index.html"
+              class="nav-link px-2 link-secondary"
+            >
+              <i class="bi bi-house"></i>
+              <span>Tobii</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-2 link-body-emphasis">Inventory</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-2 link-body-emphasis">Customers</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-2 link-body-emphasis">Products</a>
+          </li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Search..."
+            aria-label="Search"
+          />
+        </form>
+
+        <div class="col-lg-auto mb-lg-0 me-lg-3">
+          <a href="http://localhost/WEB_CODE/ITSS2/fe/cart/cart.html"
+            ><i class="bi bi-cart4"></i
+          ></a>
+        </div>
+
+        <div class="dropdown text-end">
+          <a
+            href="#"
+            class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-1/428161430_1110295763309630_6603499720418244992_n.jpg?stp=dst-jpg_p320x320&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=5B-mSBCaMEwAX_6w7In&_nc_ht=scontent.fhan14-5.fna&oh=00_AfDJJZhcmgcRnOHMk3VVctR3dkgGl09MvF0ZKxagEi99yQ&oe=65F7A2E8"
+              alt="mdo"
+              width="32"
+              height="32"
+              class="rounded-circle"
+            />
+            Tài khoản
+          </a>
+          <ul class="dropdown-menu text-small">
+            <!-- nếu chưa đăng nhập thì hiện cái này -->
+            <li><a class="dropdown-item" href="sign_in.html">Đăng nhập</a></li>
+            <li><a class="dropdown-item" href="#">Đăng ký</a></li>
+
+            <!-- nếu đã đăng nhập thì hiện cái này -->
+            <li>
+              <a
+                class="dropdown-item"
+                href="http://localhost/WEB_CODE/ITSS2/fe/shop/index.html"
+                >Cửa hàng</a
+              >
+            </li>
+            <li><a class="dropdown-item" href="#">Đơn mua</a></li>
+            <li><a class="dropdown-item" href="#">Hồ sơ</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start main -->
+    <main class="container" style="margin-top: 100px">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="row">
+                <img
+                  src="https://product.hstatic.net/200000371423/product/2023_09_11_14_01_img_3585_ca275f101d1b48439262c9f4f7e5b0b9_compact.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="row">
+                <img
+                  src="https://product.hstatic.net/200000371423/product/2023_09_11_14_00_img_3583_b958015f420d4f70a9589f2d946b65cd_compact.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="row">
+                <img
+                  src="https://product.hstatic.net/200000371423/product/2023_09_11_14_01_img_3584_56415bfc5af9455aa451e1681a9a4380_compact.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="row">
+                <img
+                  src="https://product.hstatic.net/200000371423/product/2023_09_11_14_03_img_3586_1ce6733c24c1453bba920d3da37e6c46_compact.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <img
+                src="https://product.hstatic.net/200000371423/product/2023_09_11_14_03_img_3586_1ce6733c24c1453bba920d3da37e6c46_master.jpg"
+                alt=""
+                style="width: 100%"
+              />
+            </div>
+          </div>
+          <div class="row m-5">
+            <div class="col-lg-3"><span>Đã bán: 5</span></div>
+            <div class="col-lg-8">
+              <a
+                class="form-control text-center"
+                style="background-color: aqua"
+                href="http://localhost/WEB_CODE/ITSS2/fe/user/user.html"
+              >
+                <span>
+                  <img
+                    src="https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-1/428161430_1110295763309630_6603499720418244992_n.jpg?stp=dst-jpg_p320x320&amp;_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=5f2048&amp;_nc_ohc=5B-mSBCaMEwAX_6w7In&amp;_nc_ht=scontent.fhan14-5.fna&amp;oh=00_AfDJJZhcmgcRnOHMk3VVctR3dkgGl09MvF0ZKxagEi99yQ&amp;oe=65F7A2E8"
+                    alt="mdo"
+                    width="40"
+                    height="40"
+                    class="rounded-circle"
+                  />Tobii shop</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="row">
+            <form action="">
+              <div class="row mb-5">
+                <b>Vợt cầu lông siêu cấp vippro</b>
+                <span>SKU: G10033-37</span>
+              </div>
+              <div class="row mb-5">
+                <span>883,000₫ </span>
+              </div>
+              <div class="row mb-5" style="width: 30%">
+                <div
+                  class="btn-group"
+                  role="group"
+                  aria-label="Basic checkbox toggle button group"
+                >
+                  <input
+                    type="checkbox"
+                    class="btn-check"
+                    id="btncheck1"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-outline-primary" for="btncheck1"
+                    >S</label
+                  >
+
+                  <input
+                    type="checkbox"
+                    class="btn-check"
+                    id="btncheck2"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-outline-primary" for="btncheck2"
+                    >M</label
+                  >
+
+                  <input
+                    type="checkbox"
+                    class="btn-check"
+                    id="btncheck3"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-outline-primary" for="btncheck3"
+                    >L</label
+                  >
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col-lg-3">
+                  <input
+                    class="form-control"
+                    type="number"
+                    name=""
+                    id=""
+                    value="1"
+                    min="1"
+                  />
+                </div>
+                <div class="col-lg-3">
+                  <button class="form-control" type="submit">
+                    Thêm vào giỏ
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="row">
+            <textarea name="" id="" cols="30" rows="10">
+                Vợt cầu lông Kumpoo AK7 (Nội địa trung) thuộc phân khúc giá rẻ dành cho người chơi phong trào  muốn thể hiện sức mạnh của mình trong những pha đập cầu tấn công.
+                Với chất liệu khung vợt là High Carbon Fiber 40T cứng cáp cho khả năng căng tối đa lên đến 30LBs giúp người chơi có thể lựa chọn mức căng đa dạng tùy theo sở thích. Ngoài ra thì nó còn giúp bộ khung ít bị ảnh hưởng khi xảy ra các tình huống va chạm nhỏ.</textarea
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-5 mt-5">
+        <div class="row text-center mb-2"><h4>Sản phẩm liên quan</h4></div>
+        <div class="col-lg-2 mb-5">
+          <div class="card shadow-sm">
+            <div>
+              <img
+                src="https://product.hstatic.net/1000133495/product/92799bb2842c56720f3d_41a3c78d13e5402e82407bf59cf944be_large.jpg"
+                alt=""
+                width="100%"
+              />
+            </div>
+            <div class="card-body">
+              <p class="card-text">Vợt cầu lông siêu cấp vippro.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    <a
+                      href="http://localhost/WEB_CODE/ITSS2/fe/collection/product.html"
+                      >Mua ngay</a
+                    >
+                  </button>
+                </div>
+                <big class="text-body-secondary">9$</big>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 mb-5">
+          <div class="card shadow-sm">
+            <div>
+              <img
+                src="https://product.hstatic.net/1000133495/product/92799bb2842c56720f3d_41a3c78d13e5402e82407bf59cf944be_large.jpg"
+                alt=""
+                width="100%"
+              />
+            </div>
+            <div class="card-body">
+              <p class="card-text">Vợt cầu lông siêu cấp vippro.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    <a
+                      href="http://localhost/WEB_CODE/ITSS2/fe/collection/product.html"
+                      >Mua ngay</a
+                    >
+                  </button>
+                </div>
+                <big class="text-body-secondary">9$</big>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 mb-5">
+          <div class="card shadow-sm">
+            <div>
+              <img
+                src="https://product.hstatic.net/1000133495/product/92799bb2842c56720f3d_41a3c78d13e5402e82407bf59cf944be_large.jpg"
+                alt=""
+                width="100%"
+              />
+            </div>
+            <div class="card-body">
+              <p class="card-text">Vợt cầu lông siêu cấp vippro.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    <a
+                      href="http://localhost/WEB_CODE/ITSS2/fe/collection/product.html"
+                      >Mua ngay</a
+                    >
+                  </button>
+                </div>
+                <big class="text-body-secondary">9$</big>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 mb-5">
+          <div class="card shadow-sm">
+            <div>
+              <img
+                src="https://product.hstatic.net/1000133495/product/92799bb2842c56720f3d_41a3c78d13e5402e82407bf59cf944be_large.jpg"
+                alt=""
+                width="100%"
+              />
+            </div>
+            <div class="card-body">
+              <p class="card-text">Vợt cầu lông siêu cấp vippro.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    <a
+                      href="http://localhost/WEB_CODE/ITSS2/fe/collection/product.html"
+                      >Mua ngay</a
+                    >
+                  </button>
+                </div>
+                <big class="text-body-secondary">9$</big>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 mb-5">
+          <div class="card shadow-sm">
+            <div>
+              <img
+                src="https://product.hstatic.net/1000133495/product/92799bb2842c56720f3d_41a3c78d13e5402e82407bf59cf944be_large.jpg"
+                alt=""
+                width="100%"
+              />
+            </div>
+            <div class="card-body">
+              <p class="card-text">Vợt cầu lông siêu cấp vippro.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    <a
+                      href="http://localhost/WEB_CODE/ITSS2/fe/collection/product.html"
+                      >Mua ngay</a
+                    >
+                  </button>
+                </div>
+                <big class="text-body-secondary">9$</big>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 mb-5">
+          <div class="card shadow-sm">
+            <div>
+              <img
+                src="https://product.hstatic.net/1000133495/product/92799bb2842c56720f3d_41a3c78d13e5402e82407bf59cf944be_large.jpg"
+                alt=""
+                width="100%"
+              />
+            </div>
+            <div class="card-body">
+              <p class="card-text">Vợt cầu lông siêu cấp vippro.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    <a
+                      href="http://localhost/WEB_CODE/ITSS2/fe/collection/product.html"
+                      >Mua ngay</a
+                    >
+                  </button>
+                </div>
+                <big class="text-body-secondary">9$</big>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- end main -->
+
+    <!-- start footer -->
+    <footer class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+          </li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+      </footer>
+    </footer>
+    <!-- end footer -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
