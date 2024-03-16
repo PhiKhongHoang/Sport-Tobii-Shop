@@ -50,22 +50,38 @@
           class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
         >
           <li>
-            <a
-              href="http://localhost/WEB_CODE/ITSS2/fe/index.html"
-              class="nav-link px-2 link-secondary"
-            >
+            <a href="/index.html" class="nav-link px-2 link-secondary">
               <i class="bi bi-house"></i>
               <span>Tobii</span>
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link px-2 link-body-emphasis">Inventory</a>
+            <a
+              href="/collection/category.html"
+              class="nav-link px-2 link-body-emphasis"
+              >Cầu lông</a
+            >
           </li>
           <li>
-            <a href="#" class="nav-link px-2 link-body-emphasis">Customers</a>
+            <a
+              href="/collection/category.html"
+              class="nav-link px-2 link-body-emphasis"
+              >Bóng rổ</a
+            >
           </li>
           <li>
-            <a href="#" class="nav-link px-2 link-body-emphasis">Products</a>
+            <a
+              href="/collection/category.html"
+              class="nav-link px-2 link-body-emphasis"
+              >Bóng bàn</a
+            >
+          </li>
+          <li>
+            <a
+              href="/collection/category.html"
+              class="nav-link px-2 link-body-emphasis"
+              >Khác</a
+            >
           </li>
         </ul>
 
@@ -79,9 +95,7 @@
         </form>
 
         <div class="col-lg-auto mb-lg-0 me-lg-3">
-          <a href="http://localhost/WEB_CODE/ITSS2/fe/cart/cart.html"
-            ><i class="bi bi-cart4"></i
-          ></a>
+          <a href="/cart/cart.html"><i class="bi bi-cart4"></i></a>
         </div>
 
         <div class="dropdown text-end">
@@ -103,8 +117,8 @@
           <ul class="dropdown-menu text-small">
             <!-- nếu đã đăng nhập thì hiện cái này -->
             <li><a class="dropdown-item" href="#">Cửa hàng</a></li>
-            <li><a class="dropdown-item" href="#">Đơn mua</a></li>
-            <li><a class="dropdown-item" href="#">Hồ sơ</a></li>
+
+            <a class="dropdown-item" href="/user/profile.html">Hồ sơ</a>
             <li><hr class="dropdown-divider" /></li>
             <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
           </ul>
@@ -126,10 +140,7 @@
           "
         >
           <div class="flex-shrink-0 p-3" style="width: 280px">
-            <a
-              href="http://localhost/WEB_CODE/ITSS2/fe/shop/index.html"
-              class="nav-link px-2 link-secondary"
-            >
+            <a href="/shop/index.html" class="nav-link px-2 link-secondary">
               <i class="bi bi-house"></i>
               <span>Trang chủ</span>
             </a>
@@ -333,30 +344,15 @@
     <!-- start footer -->
     <footer class="container">
       <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">About</a>
-          </li>
-        </ul>
+        <hr />
         <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
       </footer>
     </footer>
     <!-- end footer -->
 
     <!-- start bộ lọc -->
-    <div
+    <form
+      action=""
       class="row filter-div"
       id="filter-div"
       style="
@@ -376,20 +372,35 @@
           <span>Trạng thái tồn kho</span>
           <div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="" />
-              <label class="form-check-label" for="flexCheckDefault">
+              <input
+                class="form-check-input filter_check"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault1"
+              />
+              <label class="form-check-label" for="flexCheckDefault1">
                 <span> SKU hết hàng</span>
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="" />
-              <label class="form-check-label" for="flexCheckChecked">
+              <input
+                class="form-check-input filter_check"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault2"
+              />
+              <label class="form-check-label" for="flexCheckDefault2">
                 <span>SKU còn ít hàng</span>
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="" />
-              <label class="form-check-label" for="flexCheckChecked">
+              <input
+                class="form-check-input filter_check"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault3"
+              />
+              <label class="form-check-label" for="flexCheckDefault3">
                 <span>Đủ hàng</span>
               </label>
             </div>
@@ -399,18 +410,18 @@
           <span>Lượng hàng có sẵn</span>
           <div class="col">
             <select name="" id="" class="form-select">
-              <option value="">Lớn hơn</option>
+              <option value="" class="selected">Lớn hơn</option>
               <option value="">Lớn hơn hoặc bằng</option>
               <option value="">Bằng</option>
               <option value="">Ít hơn</option>
-              <option value="" selected>Ít hơn hoặc bằng</option>
+              <option value="">Ít hơn hoặc bằng</option>
             </select>
           </div>
           <div class="col">
             <input
               type="number"
               name=""
-              id=""
+              id="quantityInput"
               class="form-control"
               placeholder="Nhập số lượng"
             />
@@ -420,10 +431,10 @@
           <span>Khoảng thời gian bán hàng</span>
           <div>
             <select name="" id="" class="form-select">
-              <option value="">7 ngày</option>
+              <option value="" class="selected">7 ngày</option>
               <option value="">14 ngày</option>
               <option value="">21 ngày</option>
-              <option value="" selected>30 ngày</option>
+              <option value="">30 ngày</option>
             </select>
           </div>
         </div>
@@ -431,7 +442,7 @@
           <span>Danh mục</span>
           <div>
             <select name="" id="" class="form-select">
-              <option value="">-- Chọn danh mục --</option>
+              <option value="" class="selected">-- Chọn danh mục --</option>
               <option value="">Bóng bàn</option>
               <option value="">Cầu lông</option>
               <option value="">Bóng rổ</option>
@@ -441,7 +452,7 @@
         <div class="row m-5"></div>
         <div class="row">
           <div class="col">
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" id="filter_remove">
               <span>Xóa tất cả</span>
             </button>
           </div>
@@ -452,13 +463,13 @@
             </button>
           </div>
           <div class="col">
-            <button type="button" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary">
               <span>Áp dụng</span>
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
     <!-- end bộ lọc -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -468,6 +479,7 @@
   </body>
 
   <script>
+    // ẩn / hiện bộ lọc
     document
       .getElementById("filter-button")
       .addEventListener("click", function () {
@@ -479,6 +491,7 @@
         }
       });
 
+    // hủy bộ lọc
     document
       .getElementById("filter-clear")
       .addEventListener("click", function () {
@@ -488,6 +501,23 @@
         } else {
           myDiv.style.display = "";
         }
+      });
+
+    // xóa bộ lọc
+    document
+      .getElementById("filter_remove")
+      .addEventListener("click", function () {
+        var checkboxes = document.querySelectorAll(".filter_check");
+        var selectElements = document.querySelectorAll(".selected");
+        var quantityInput = document.getElementById("quantityInput");
+
+        selectElements.forEach(function (select) {
+          select.selected = true;
+        });
+        checkboxes.forEach(function (checkbox) {
+          checkbox.checked = false;
+        });
+        quantityInput.value = ""; // Đặt giá trị thành chuỗi rỗng
       });
   </script>
 </html>

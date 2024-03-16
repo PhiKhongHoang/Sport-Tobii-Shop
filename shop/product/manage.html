@@ -50,22 +50,38 @@
           class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
         >
           <li>
-            <a
-              href="http://localhost/WEB_CODE/ITSS2/fe/index.html"
-              class="nav-link px-2 link-secondary"
-            >
+            <a href="/index.html" class="nav-link px-2 link-secondary">
               <i class="bi bi-house"></i>
               <span>Tobii</span>
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link px-2 link-body-emphasis">Inventory</a>
+            <a
+              href="/collection/category.html"
+              class="nav-link px-2 link-body-emphasis"
+              >Cầu lông</a
+            >
           </li>
           <li>
-            <a href="#" class="nav-link px-2 link-body-emphasis">Customers</a>
+            <a
+              href="/collection/category.html"
+              class="nav-link px-2 link-body-emphasis"
+              >Bóng rổ</a
+            >
           </li>
           <li>
-            <a href="#" class="nav-link px-2 link-body-emphasis">Products</a>
+            <a
+              href="/collection/category.html"
+              class="nav-link px-2 link-body-emphasis"
+              >Bóng bàn</a
+            >
+          </li>
+          <li>
+            <a
+              href="/collection/category.html"
+              class="nav-link px-2 link-body-emphasis"
+              >Khác</a
+            >
           </li>
         </ul>
 
@@ -79,9 +95,7 @@
         </form>
 
         <div class="col-lg-auto mb-lg-0 me-lg-3">
-          <a href="http://localhost/WEB_CODE/ITSS2/fe/cart/cart.html"
-            ><i class="bi bi-cart4"></i
-          ></a>
+          <a href="/cart/cart.html"><i class="bi bi-cart4"></i></a>
         </div>
 
         <div class="dropdown text-end">
@@ -103,8 +117,8 @@
           <ul class="dropdown-menu text-small">
             <!-- nếu đã đăng nhập thì hiện cái này -->
             <li><a class="dropdown-item" href="#">Cửa hàng</a></li>
-            <li><a class="dropdown-item" href="#">Đơn mua</a></li>
-            <li><a class="dropdown-item" href="#">Hồ sơ</a></li>
+
+            <a class="dropdown-item" href="/user/profile.html">Hồ sơ</a>
             <li><hr class="dropdown-divider" /></li>
             <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
           </ul>
@@ -126,10 +140,7 @@
           "
         >
           <div class="flex-shrink-0 p-3" style="width: 280px">
-            <a
-              href="http://localhost/WEB_CODE/ITSS2/fe/shop/index.html"
-              class="nav-link px-2 link-secondary"
-            >
+            <a href="/shop/index.html" class="nav-link px-2 link-secondary">
               <i class="bi bi-house"></i>
               <span>Trang chủ</span>
             </a>
@@ -313,9 +324,8 @@
                   <td style="text-align: left; padding-left: 10%">
                     <div class="mb-3 mt-3">
                       <input
-                        class="form-check-input"
+                        class="form-check-input check-one-product"
                         type="checkbox"
-                        id="check-one-product"
                       />
                       <img
                         src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/4f613688175b4607a62b00b39e822795~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
@@ -337,9 +347,8 @@
                   <td style="text-align: left; padding-left: 10%">
                     <div class="mb-3 mt-3">
                       <input
-                        class="form-check-input"
+                        class="form-check-input check-one-product"
                         type="checkbox"
-                        id="check-one-product"
                       />
                       <img
                         src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/4f613688175b4607a62b00b39e822795~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
@@ -369,23 +378,7 @@
     <!-- start footer -->
     <footer class="container">
       <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">About</a>
-          </li>
-        </ul>
+        <hr />
         <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
       </footer>
     </footer>
@@ -533,13 +526,27 @@
         document.getElementById("productNameInput").value = "";
       });
 
-    //   chọn tất cả product
+    // chọn/bỏ chọn product
     document
       .getElementById("check-all-product")
-      .addEventListener("change", function () {
-        var checkboxes = document.getElementsByClassName("check-one-product");
-        for (var i = 0; i < checkboxes.length; i++) {
-          checkboxes[i].checked = this.checked;
+      .addEventListener("click", function () {
+        // Lấy checkbox "check-all-product"
+        var checkAllCheckbox = document.getElementById("check-all-product");
+
+        // Lấy tất cả các checkbox "check-one-product"
+        var checkboxes = document.querySelectorAll(".check-one-product");
+
+        // Kiểm tra trạng thái của checkbox "check-all-product"
+        if (checkAllCheckbox.checked) {
+          // Nếu checkbox "check-all-product" đã được chọn, bỏ chọn tất cả các checkbox "check-one-product"
+          checkboxes.forEach(function (checkbox) {
+            checkbox.checked = true;
+          });
+        } else {
+          // Nếu checkbox "check-all-product" chưa được chọn, chọn tất cả các checkbox "check-one-product"
+          checkboxes.forEach(function (checkbox) {
+            checkbox.checked = false;
+          });
         }
       });
   </script>
